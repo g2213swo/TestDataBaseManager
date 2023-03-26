@@ -17,16 +17,16 @@ public class DataBaseManager {
 
     public static void initialize(String type) {
         System.out.println("Initializing database...");
-        switch (type) {
-            case "mysql":
+        switch (type.toUpperCase()) {
+            case "MYSQL":
                 dataBase = new MySQL();
                 dataBase.connect();
                 break;
-            case "redis":
+            case "REDIS":
                 dataBase = new Redis();
                 dataBase.connect();
                 break;
-            case "local":
+            case "LOCAL":
                 dataBase = new Local();
                 dataBase.connect();
                 break;
